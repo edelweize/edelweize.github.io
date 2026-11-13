@@ -1,2 +1,182 @@
-/* style.css — the appearance of the website (colors, fonts, layout).
-   Empty for now. Filled in during Stage 2. */
+/* ==========================================================================
+   style.css — the appearance of the website
+   Order: 1. Design tokens  2. Reset  3. Base  4. Typography  5. Sections
+          6. Components
+   ========================================================================== */
+
+
+/* 1. DESIGN TOKENS -----------------------------------------------------------
+   Variables for every color, font, and spacing value used on the site.
+   Change a value here and it changes everywhere it is used. */
+:root {
+  /* Colors */
+  --color-bg: #0B1220;
+  --color-bg-alt: #142238;
+  --color-accent: #22D3EE;
+  --color-text: #F8FAFC;
+  --color-text-muted: #94A3B8;
+  --color-border: #24344F;
+
+  /* Fonts */
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Spacing scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 3rem;
+  --space-xl: 5rem;
+
+  /* Shape */
+  --radius: 8px;
+}
+
+
+/* 2. RESET ---------------------------------------------------------------------
+   Browsers add their own default margins and sizes. Remove them so every
+   browser starts from the same point. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* 3. BASE ----------------------------------------------------------------------
+   Rules for the whole page. */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Visible outline for people who navigate with the keyboard (Tab key). */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Turn off smooth scrolling for visitors who disabled animations on their device. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+
+/* 4. TYPOGRAPHY ------------------------------------------------------------------ */
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+}
+
+/* clamp(min, preferred, max): the size grows with the screen width,
+   but never goes below the minimum or above the maximum. */
+h1 {
+  font-size: clamp(2.25rem, 6vw, 3.75rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+}
+
+p {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+  max-width: 65ch;
+}
+
+/* Small technical-looking label, used above headings. */
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--color-accent);
+  letter-spacing: 0.05em;
+}
+
+
+/* 5. SECTIONS --------------------------------------------------------------------
+   Temporary spacing so the page is readable. The real layout comes in Stage 3. */
+header,
+section,
+footer {
+  padding: var(--space-lg) var(--space-md);
+}
+
+/* Every second section gets the lighter navy, so sections alternate. */
+section:nth-of-type(even) {
+  background-color: var(--color-bg-alt);
+}
+
+
+/* 6. COMPONENTS ------------------------------------------------------------------ */
+
+/* Button: shared shape for every button. */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius);
+  font-weight: 600;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+/* Primary button: filled cyan. */
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--color-accent);
+}
+
+/* EXERCISE 3: write the .btn-outline rules below this line. */
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-accent);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+}
