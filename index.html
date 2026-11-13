@@ -18,21 +18,22 @@
 <body>
 
   <!-- HEADER: site name and main navigation, shown at the top of the page. -->
-  <header id="top">
-    <a href="#top">Edward Bridger Badar</a>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="logo">Edward Bridger Badar</a>
 
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <!-- EXERCISE 1: add the links for Skills, Experience, Projects, Education, and Contact here. -->
-      </ul>
-    </nav>
+      <nav aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <!-- MAIN: the unique content of this page. One <section> per topic. -->
@@ -40,59 +41,402 @@
 
     <!-- HERO: the first thing a visitor sees. -->
     <section id="hero">
-      <img src="assets/images/edward-bridger-badar.webp" alt="Portrait of Edward Bridger Badar" width="200">
-      <p class="label">IT Support &amp; Web Specialist — SEO &amp; Networking</p>
-      <h1>Edward Bridger Badar</h1>
-      <p>
-        I keep technology running and documented. With 10+ years across IT support,
-        networking, web, and project documentation, I help teams and clients solve
-        technical problems and keep their systems and websites working reliably.
-      </p>
-      <p>Open to remote roles and part-time freelance projects.</p>
-      <a href="#contact" class="btn btn-primary">Get in Touch</a>
-      <a href="assets/documents/Edward_Bridger_Badar_CV.pdf" class="btn btn-outline" download>Download CV</a>
+      <div class="container hero-grid">
+        <div>
+          <p class="label">IT Support &amp; Web Specialist — SEO &amp; Networking</p>
+          <h1>Edward Bridger Badar</h1>
+          <p class="hero-intro">
+            I keep technology running and documented. With 10+ years across IT support,
+            networking, web, and project documentation, I help teams and clients solve
+            technical problems and keep their systems and websites working reliably.
+          </p>
+          <p class="availability">Open to remote roles and part-time freelance projects.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Get in Touch</a>
+            <a href="assets/documents/Edward_Bridger_Badar_CV.pdf" class="btn btn-outline" download>Download CV</a>
+          </div>
+        </div>
+        <img class="hero-photo" src="assets/images/edward-bridger-badar.webp" alt="Portrait of Edward Bridger Badar" width="280" height="280">
+      </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about">
-      <h2>About Me</h2>
-      <!-- Content added in Stage 3. -->
+      <div class="container">
+        <p class="label">About</p>
+        <h2>About Me</h2>
+        <p>
+          My career started at the service desk of computer stores in Manado, where I spent
+          six years deploying, repairing, and maintaining computers for everyday users. After
+          earning my degree in Informatics Engineering, I moved into internet installation and
+          ISP network work, then into website maintenance, SEO, and document control for
+          construction projects.
+        </p>
+        <p>
+          These roles share one thread: keeping technology running and making sure the work
+          is documented. I am comfortable talking to non-technical users, working in the field
+          with network equipment, maintaining a website, and writing the report that explains
+          what was done.
+        </p>
+        <p>
+          I am based in Manado, Indonesia (UTC+8) and work with clients and teams remotely.
+        </p>
+      </div>
     </section>
 
+    <!-- SERVICES -->
     <section id="services">
-      <h2>Services</h2>
-      <!-- Content added in Stage 3. -->
+      <div class="container">
+        <p class="label">Services</p>
+        <h2>How I Can Help</h2>
+        <div class="card-grid">
+
+          <article class="card">
+            <h3>Remote IT Support</h3>
+            <p>Troubleshooting hardware and software issues, system setup, and day-to-day technical help for users and small teams.</p>
+          </article>
+
+          <article class="card">
+            <h3>Website Maintenance &amp; WordPress</h3>
+            <p>Keeping existing websites updated, monitored, and working, including hosting, domain, and DNS management.</p>
+          </article>
+
+          <article class="card">
+            <h3>SEO Optimization</h3>
+            <p>Keyword research, page titles, meta tags, and on-page improvements that help search engines understand a website.</p>
+          </article>
+
+          <article class="card">
+            <h3>Network Setup &amp; Troubleshooting</h3>
+            <p>Installation and configuration of routers, switches, and access points, and diagnosis of connection problems.</p>
+          </article>
+
+          <!-- EXERCISE 5: add the fifth service card, "Technical Documentation", here. -->
+          <article class="card">
+            <h3>Technical Documentation</h3>
+            <p>I make reports for working progress, and also make a safety report regarding the incidents that happen in site, and i create timeline for projects</p>
+          </article>
+
+        </div>
+      </div>
     </section>
 
+    <!-- SKILLS -->
     <section id="skills">
-      <h2>Technical Skills</h2>
-      <!-- Content added in Stage 3. -->
+      <div class="container">
+        <p class="label">Skills</p>
+        <h2>Technical Skills</h2>
+        <p class="skill-legend">
+          <span class="tag">Core</span> used regularly in professional work
+          <span class="tag tag-familiar">Familiar</span> working knowledge
+        </p>
+        <div class="card-grid">
+
+          <article class="card">
+            <h3>IT Support &amp; System Administration</h3>
+            <ul class="tag-list">
+              <li class="tag">Hardware &amp; Software Configuration</li>
+              <li class="tag">Computer System Maintenance</li>
+              <li class="tag">Technical Troubleshooting</li>
+              <li class="tag">System Configuration</li>
+              <li class="tag">Technical &amp; Customer Support</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Network Administration</h3>
+            <ul class="tag-list">
+              <li class="tag">Network System Configuration</li>
+              <li class="tag">Network Troubleshooting</li>
+              <li class="tag">LAN &amp; WAN Assessment</li>
+              <li class="tag">Network Equipment Deployment</li>
+              <li class="tag tag-familiar">MikroTik</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Web Development</h3>
+            <ul class="tag-list">
+              <li class="tag">HTML</li>
+              <li class="tag">WordPress</li>
+              <li class="tag">Web Design</li>
+              <li class="tag">Web Server Configuration</li>
+              <li class="tag tag-familiar">CSS</li>
+              <li class="tag tag-familiar">JavaScript</li>
+              <li class="tag tag-familiar">PHP</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>SEO</h3>
+            <ul class="tag-list">
+              <li class="tag">SEO Techniques</li>
+              <li class="tag">Keyword Research</li>
+              <li class="tag">Meta Tags</li>
+              <li class="tag">Link Building</li>
+              <li class="tag">Website Optimization</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Office &amp; Creative Software</h3>
+            <ul class="tag-list">
+              <li class="tag">Microsoft Word</li>
+              <li class="tag">Microsoft Excel</li>
+              <li class="tag">Adobe Acrobat</li>
+              <li class="tag">Adobe Photoshop</li>
+              <li class="tag">Adobe Premiere</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Professional Skills</h3>
+            <ul class="tag-list">
+              <li class="tag">Technical Writing</li>
+              <li class="tag">Critical Thinking</li>
+              <li class="tag">Active Listening</li>
+              <li class="tag">Customer Support</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
     </section>
 
+    <!-- EXPERIENCE -->
     <section id="experience">
-      <h2>Professional Experience</h2>
-      <!-- Content added in Stage 3. -->
+      <div class="container">
+        <p class="label">Experience</p>
+        <h2>Professional Experience</h2>
+        <ol class="timeline">
+
+          <li class="timeline-item">
+            <p class="timeline-period">Apr 2026 – Present</p>
+            <h3>Dump Truck Operator</h3>
+            <p class="timeline-company">PT Indonesia Weda Bay Industrial Park</p>
+            <ul>
+              <li>Operate site vehicles in an industrial park.</li>
+              <li>Occasionally assist the control room with routine monitoring reports.</li>
+            </ul>
+          </li>
+
+          <li class="timeline-item">
+            <p class="timeline-period">2024 – 2025</p>
+            <h3>IT Support &amp; Webmaster</h3>
+            <p class="timeline-company">Private Company (name withheld for confidentiality)</p>
+            <ul>
+              <li>Provided day-to-day IT support for staff.</li>
+              <li>Maintained and updated the company's websites.</li>
+            </ul>
+          </li>
+
+          <li class="timeline-item">
+            <p class="timeline-period">2023 – 2024</p>
+            <h3>Document Control</h3>
+            <p class="timeline-company">PT Surya Mulia Sampurna — TUNA Project (construction)</p>
+            <ul>
+              <li>Created, edited, and archived project documents using Microsoft Word, Excel, and Adobe Acrobat.</li>
+              <li>Followed document control procedures for transmitting and receiving documents.</li>
+              <li>Prepared daily reports, monthly progress reports, and safety reports.</li>
+            </ul>
+          </li>
+
+          <li class="timeline-item">
+            <p class="timeline-period">2022 – 2023</p>
+            <h3>Freelance Webmaster &amp; SEO Specialist</h3>
+            <p class="timeline-company">Confidential client</p>
+            <ul>
+              <li>Maintained existing web applications, monitored performance, and implemented changes.</li>
+              <li>Carried out keyword research and managed page titles and meta tags.</li>
+              <li>Managed hosting services, domains, and DNS records.</li>
+              <li>Built responsive web pages with HTML5, CSS3, JavaScript, and PHP.</li>
+            </ul>
+          </li>
+
+          <li class="timeline-item">
+            <p class="timeline-period">2021 – 2022</p>
+            <h3>IT Project Engineer</h3>
+            <p class="timeline-company">PT Pronet Media</p>
+            <ul>
+              <li>Set up network connections for new customer installations.</li>
+              <li>Assisted with MikroTik configuration, primary and backup uplinks, and Nokia OLT, ODP, and ONT equipment for an ISP serving approximately 400 subscribers.</li>
+              <li>Deployed routers, switches, firewalls, and wireless access points.</li>
+              <li>Worked with vendors and reported network status, infrastructure utilization, and customer activations.</li>
+              <li>Wrote installation and troubleshooting procedures for field technicians and contributed to disaster recovery planning.</li>
+              <li>Managed the warehouse of network equipment.</li>
+            </ul>
+          </li>
+
+          <li class="timeline-item">
+            <p class="timeline-period">2020 – 2021</p>
+            <h3>Document Control</h3>
+            <p class="timeline-company">PT Surya Mulia Sampurna — HOPE Project (construction)</p>
+            <ul>
+              <li>Documented project work progress and safety activities, including meetings, training, and inspections.</li>
+              <li>Prepared daily, monthly, and safety reports.</li>
+            </ul>
+          </li>
+
+          <li class="timeline-item">
+            <p class="timeline-period">2019 – 2020</p>
+            <h3>Internet Installation &amp; Repair Technician</h3>
+            <p class="timeline-company">Telkom Indonesia (via authorized partner)</p>
+            <ul>
+              <li>Installed new internet connections at customer premises.</li>
+              <li>Diagnosed and repaired connection faults and resolved customer support tickets.</li>
+            </ul>
+          </li>
+
+          <li class="timeline-item">
+            <p class="timeline-period">2011 – 2015</p>
+            <h3>IT Support Technician</h3>
+            <p class="timeline-company">Blessing Computer</p>
+            <ul>
+              <li>Troubleshot hardware and software issues for users.</li>
+              <li>Installed, configured, maintained, and upgraded computer systems and network equipment.</li>
+            </ul>
+          </li>
+
+          <li class="timeline-item">
+            <p class="timeline-period">2009 – 2011</p>
+            <h3>IT Support Technician</h3>
+            <p class="timeline-company">Harvest Computer</p>
+            <ul>
+              <li>Deployed new PCs and laptops, installed operating systems, and configured required software.</li>
+              <li>Provided technical support to walk-in and on-site users.</li>
+            </ul>
+          </li>
+
+        </ol>
+      </div>
     </section>
 
+    <!-- PROJECTS -->
     <section id="projects">
-      <h2>Projects</h2>
-      <!-- Content added in Stage 3. -->
+      <div class="container">
+        <p class="label">Projects</p>
+        <h2>Projects</h2>
+
+        <h3 class="section-subtitle">Case Studies</h3>
+        <div class="card-grid">
+
+          <article class="card">
+            <p class="label">IT Support</p>
+            <h3>PC Deployment &amp; System Maintenance</h3>
+            <p>Six years of deploying, repairing, and maintaining computers for everyday users.</p>
+            <a class="card-link" href="case-studies/pc-deployment.html">Read case study →</a>
+          </article>
+
+          <article class="card">
+            <p class="label">Networking</p>
+            <h3>ISP Network Deployment &amp; Field Operations</h3>
+            <p>Supporting installations and network infrastructure for a local internet service provider.</p>
+            <a class="card-link" href="case-studies/isp-network.html">Read case study →</a>
+          </article>
+
+          <article class="card">
+            <p class="label">Web</p>
+            <h3>Website Development &amp; Maintenance</h3>
+            <p>Keeping a client's web applications, hosting, and DNS running reliably.</p>
+            <a class="card-link" href="case-studies/website-development.html">Read case study →</a>
+          </article>
+
+          <article class="card">
+            <p class="label">SEO</p>
+            <h3>SEO &amp; Website Optimization</h3>
+            <p>Applying keyword research and on-page SEO practices to improve search visibility.</p>
+            <a class="card-link" href="case-studies/seo-optimization.html">Read case study →</a>
+          </article>
+
+          <article class="card">
+            <p class="label">Documentation</p>
+            <h3>Project Documentation &amp; Reporting</h3>
+            <p>Document control and progress reporting for two construction projects.</p>
+            <a class="card-link" href="case-studies/project-documentation.html">Read case study →</a>
+          </article>
+
+        </div>
+
+        <h3 class="section-subtitle">Personal Projects</h3>
+        <div class="card-grid">
+
+          <article class="card">
+            <p class="label">HTML · CSS · JavaScript</p>
+            <h3>This Portfolio Website</h3>
+            <p>A responsive portfolio built from scratch without frameworks, version-controlled with Git.</p>
+            <a class="card-link" href="https://github.com/edelweize" target="_blank" rel="noopener">View on GitHub →</a>
+          </article>
+
+          <!-- To add a new project later: copy one <article class="card"> block above and change its text and link. -->
+
+        </div>
+      </div>
     </section>
 
+    <!-- EDUCATION & CERTIFICATIONS -->
     <section id="education">
-      <h2>Education &amp; Certifications</h2>
-      <!-- Content added in Stage 3. -->
+      <div class="container">
+        <p class="label">Education</p>
+        <h2>Education &amp; Certifications</h2>
+        <div class="card-grid">
+
+          <article class="card">
+            <p class="label">Degree · 2019</p>
+            <h3>Bachelor of Computer Science (S.Kom)</h3>
+            <p>Informatics Engineering<br>Sam Ratulangi University, Manado</p>
+          </article>
+
+          <article class="card">
+            <p class="label">Certification · Issued 2017</p>
+            <h3>Computer Operator — Help Desk</h3>
+            <p>BNSP Certificate of Competence<br>LSP Teknologi Informasi dan Telekomunikasi Indonesia</p>
+          </article>
+
+          <article class="card">
+            <p class="label">Certification · Issued 2021</p>
+            <h3>Oil and Gas Industry OHS Supervisor</h3>
+            <p>BNSP Certificate of Competence<br>LSP PPSDM Migas Cepu</p>
+          </article>
+
+          <article class="card">
+            <p class="label">Languages</p>
+            <h3>Indonesian &amp; English</h3>
+            <p>Indonesian — Native<br>English — Professional Working Proficiency</p>
+          </article>
+
+        </div>
+      </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact">
-      <h2>Contact</h2>
-      <!-- Content added in Stage 3. -->
+      <div class="container">
+        <p class="label">Contact</p>
+        <h2>Get in Touch</h2>
+        <p>
+          Have a role, a project, or a technical problem to discuss? Send me a message through
+          any of the channels below. I am based in Manado, Indonesia (UTC+8).
+        </p>
+        <ul class="contact-list">
+          <li><a class="btn btn-outline" href="mailto:edelshey2511@gmail.com">Email</a></li>
+          <li><a class="btn btn-outline" href="https://wa.me/6282344680591" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a class="btn btn-outline" href="https://www.linkedin.com/in/edward-badar-6a75152a7/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a class="btn btn-outline" href="https://upwork.com/freelancers/~01fb6d2ef55bfadf61" target="_blank" rel="noopener">Upwork</a></li>
+          <li><a class="btn btn-outline" href="https://github.com/edelweize" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
     </section>
 
   </main>
 
   <!-- FOOTER: closing information, repeated at the bottom of every page. -->
-  <footer>
-    <p>&copy; 2026 Edward Bridger Badar. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p class="logo">Edward Bridger Badar</p>
+      <p>IT Support &amp; Web Specialist — SEO &amp; Networking</p>
+      <p><a href="#top">Back to top ↑</a></p>
+      <p>&copy; <span id="year">2026</span> Edward Bridger Badar. All rights reserved.</p>
+    </div>
   </footer>
 
   <!-- Connects this page to the JavaScript file (filled in during Stage 5). -->
