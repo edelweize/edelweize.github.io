@@ -1,0 +1,6 @@
+# robots.txt: instructions for search engine crawlers.
+# Every crawler may read every page.
+User-agent: *
+Allow: /
+
+Sitemap: https://edelweize.github.io/sitemap.xml

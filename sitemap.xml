@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sitemap: the list of pages search engines should know about. Add a <url> entry for every new page. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://edelweize.github.io/</loc></url>
+  <url><loc>https://edelweize.github.io/id/</loc></url>
+  <url><loc>https://edelweize.github.io/zh/</loc></url>
+  <url><loc>https://edelweize.github.io/case-studies/isp-network.html</loc></url>
+  <url><loc>https://edelweize.github.io/id/case-studies/isp-network.html</loc></url>
+  <url><loc>https://edelweize.github.io/zh/case-studies/isp-network.html</loc></url>
+  <url><loc>https://edelweize.github.io/case-studies/pc-deployment.html</loc></url>
+  <url><loc>https://edelweize.github.io/id/case-studies/pc-deployment.html</loc></url>
+  <url><loc>https://edelweize.github.io/zh/case-studies/pc-deployment.html</loc></url>
+  <url><loc>https://edelweize.github.io/case-studies/project-documentation.html</loc></url>
+  <url><loc>https://edelweize.github.io/id/case-studies/project-documentation.html</loc></url>
+  <url><loc>https://edelweize.github.io/zh/case-studies/project-documentation.html</loc></url>
+  <url><loc>https://edelweize.github.io/case-studies/seo-optimization.html</loc></url>
+  <url><loc>https://edelweize.github.io/id/case-studies/seo-optimization.html</loc></url>
+  <url><loc>https://edelweize.github.io/zh/case-studies/seo-optimization.html</loc></url>
+  <url><loc>https://edelweize.github.io/case-studies/website-development.html</loc></url>
+  <url><loc>https://edelweize.github.io/id/case-studies/website-development.html</loc></url>
+  <url><loc>https://edelweize.github.io/zh/case-studies/website-development.html</loc></url>
+</urlset>

@@ -4,6 +4,8 @@ Personal portfolio website for Edward Bridger Badar, IT Support & Web Specialist
 
 Built with plain HTML, CSS, and JavaScript. No frameworks, no build step.
 
+Live site: https://edelweize.github.io/
+
 ## Structure
 
 - `index.html` — main page
