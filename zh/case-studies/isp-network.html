@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISP网络部署与现场运维 | Edward Bridger Badar</title>
+  <meta name="description" content="案例研究：为一家拥有约400名用户的本地ISP开通新的光纤宽带用户。">
+
+  <!-- Open Graph: the title and description shown when this page is shared on WhatsApp, LinkedIn, and other apps. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ISP网络部署与现场运维 | Edward Bridger Badar">
+  <meta property="og:description" content="案例研究：为一家拥有约400名用户的本地ISP开通新的光纤宽带用户。">
+
+  <!-- Favicon: the small icon in the browser tab. theme-color tints the browser bar on phones. -->
+  <link rel="icon" href="../../assets/images/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0B1220">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- "../" means: go up one folder. This page is inside case-studies/, the assets are one level above. -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo">Edward Bridger Badar</a>
+
+      <!-- Language switcher: links to this same page in the other languages. -->
+      <div class="lang-switch" role="group" aria-label="Language">
+        <a href="../../case-studies/isp-network.html" lang="en" hreflang="en">EN</a>
+        <a href="../../id/case-studies/isp-network.html" lang="id" hreflang="id">ID</a>
+        <a href="../../zh/case-studies/isp-network.html" lang="zh-Hans" hreflang="zh-Hans" class="is-current" aria-current="page">中文</a>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-label="打开菜单" data-label-open="打开菜单" data-label-close="关闭菜单" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav aria-label="主导航">
+        <ul class="nav-list" id="nav-menu">
+          <li><a href="../index.html#about">关于我</a></li>
+          <li><a href="../index.html#services">服务</a></li>
+          <li><a href="../index.html#skills">技能</a></li>
+          <li><a href="../index.html#experience">工作经历</a></li>
+          <li><a href="../index.html#projects">项目</a></li>
+          <li><a href="../index.html#education">教育背景</a></li>
+          <li><a href="../index.html#contact">联系方式</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="container case-study">
+      <p class="label">网络 · 2021 – 2022</p>
+      <h1>ISP网络部署与现场运维</h1>
+      <p class="case-intro">为一家拥有约400名用户的本地互联网服务提供商开通新的光纤宽带用户。</p>
+
+      <section>
+        <h2>项目概述</h2>
+        <p>我在PT Pronet Media担任IT项目工程师。公司为约400名用户提供光纤宽带服务。我的工作是把在用户家中施工的现场团队与使线路上线的网络设备衔接起来。</p>
+      </section>
+
+      <section>
+        <h2>问题与挑战</h2>
+        <p>每一次新装都依赖现场向网络侧准确传递信息：住户到分纤点的距离、光猫序列号以及所用端口。这些信息必须转化为一条可用且限速正确的线路，现场技术员也需要一套清晰的方法在用户家中完成设置。</p>
+      </section>
+
+      <section>
+        <h2>我的职责</h2>
+        <ul class="bullet-list">
+          <li>接收现场团队的勘察报告，并为每次新开通做好准备。</li>
+          <li>在OLT上注册用户光猫，并确认光衰在安全范围内。</li>
+          <li>在MikroTik中为每位用户创建PPPoE账号并设置限速。</li>
+          <li>指导现场技术员将光猫接入网络并设置用户的Wi-Fi。</li>
+          <li>与供应商协调主用和备用上行链路的配置，并协助完成配置。</li>
+          <li>向供应商汇报基础设施利用率和用户开通情况。</li>
+          <li>管理网络设备仓库。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>技术方案</h2>
+        <ol class="step-list">
+          <li>现场团队勘察位置，并上报到ODP的距离、光猫序列号和所用ODP端口。</li>
+          <li>在OLT上注册光猫序列号和端口。</li>
+          <li>检查光衰，确认线路状态正常。</li>
+          <li>在MikroTik中创建PPPoE账号并设置限速。</li>
+          <li>技术员在用户光猫上填入PPPoE信息，使其接入网络。</li>
+          <li>配置用户的Wi-Fi并测试连接。</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>工具与技术</h2>
+        <ul class="tag-list">
+          <li class="tag">MikroTik</li>
+          <li class="tag">PPPoE</li>
+          <li class="tag">Nokia OLT</li>
+          <li class="tag">ODP</li>
+          <li class="tag">ONT</li>
+          <li class="tag">光纤</li>
+          <li class="tag">Wi-Fi设置</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>成果与运营效益</h2>
+        <p>每位新用户都按同一流程开通，从勘察到线路测试通过。每条线路都按用户订购的速率限速，现场技术员也有了在现场完成光猫和Wi-Fi设置所需的指引。</p>
+      </section>
+
+      <section>
+        <h2>经验总结</h2>
+        <p>只有MikroTik侧和光猫侧都配置正确，线路才能正常使用。而这一切的前提是现场提供准确的信息。</p>
+      </section>
+
+      <nav class="case-nav" aria-label="案例导航">
+        <a href="../index.html#projects">← 全部项目</a>
+        <a href="website-development.html">下一篇：网站开发 →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="logo">Edward Bridger Badar</p>
+      <p>IT支持与网站专员 — SEO与网络</p>
+      <p><a href="#top">返回顶部 ↑</a></p>
+      <p>&copy; <span id="year">2026</span> Edward Bridger Badar。保留所有权利。</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

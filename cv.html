@@ -13,6 +13,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Favicon: the small icon in the browser tab. theme-color tints the browser bar on phones. -->
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+
   <!-- The CV has its own stylesheet: it is a white paper document, not a dark web page. -->
   <link rel="stylesheet" href="assets/css/cv.css">
 </head>
@@ -21,6 +24,12 @@
   <!-- Toolbar: visible on screen, hidden when printing. -->
   <div class="toolbar">
     <a href="index.html">← Back to portfolio</a>
+    <!-- Language switcher: links to this same page in the other languages. -->
+    <div class="lang-switch" role="group" aria-label="Language">
+      <a href="cv.html" lang="en" hreflang="en" class="is-current" aria-current="page">EN</a>
+      <a href="id/cv.html" lang="id" hreflang="id">ID</a>
+      <a href="zh/cv.html" lang="zh-Hans" hreflang="zh-Hans">中文</a>
+    </div>
     <button type="button" onclick="window.print()">Print / Save as PDF</button>
   </div>
 

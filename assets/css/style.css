@@ -425,6 +425,45 @@ html {
 }
 
 
+/* Language switcher: EN | ID | 中文. On desktop it sits at the far right, after the nav. */
+.site-header nav {
+  margin-left: auto;
+}
+
+.lang-switch {
+  display: flex;
+  gap: var(--space-xs);
+  order: 3;
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+}
+
+.lang-switch a {
+  padding: 0.125rem 0.375rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  color: var(--color-text-muted);
+}
+
+.lang-switch a:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* The language of the page being viewed. */
+.lang-switch a.is-current {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* Chinese pages: Space Grotesk, Inter, and JetBrains Mono have no Chinese characters,
+   so add fonts that are already installed on most devices. No extra download. */
+html:lang(zh) {
+  --font-heading: "Space Grotesk", "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+  --font-body: "Inter", "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+  --font-mono: "JetBrains Mono", "Microsoft YaHei", "PingFang SC", "Noto Sans SC", monospace;
+}
+
 /* Hamburger button: hidden on desktop, shown in the responsive section below. */
 .menu-toggle {
   display: none;
@@ -541,15 +580,22 @@ html {
   }
 }
 
-/* Small tablet and phone: the nav links are replaced by the hamburger menu. */
-@media (max-width: 768px) {
+/* Tablet and phone: the nav links are replaced by the hamburger menu. */
+@media (max-width: 1000px) {
   .menu-toggle {
     display: block;
+  }
+
+  /* The language switcher moves next to the hamburger button, on the right. */
+  .lang-switch {
+    order: 0;
+    margin-left: auto;
   }
 
   /* The nav takes a full row below the logo and button. */
   .site-header nav {
     flex-basis: 100%;
+    margin-left: 0;
   }
 
   /* Hidden by default. main.js adds the class "is-open" when the button is clicked. */
@@ -600,4 +646,28 @@ html {
   flex: 1 1 100%;
   text-align: center;
 }
+}
+
+/* Small phone: tighten the header so the logo, language switcher, and
+   hamburger button fit on one row. */
+@media (max-width: 480px) {
+  .container {
+    width: calc(100% - 2rem);
+  }
+
+  .header-inner {
+    gap: var(--space-xs);
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .lang-switch {
+    gap: 0.25rem;
+  }
+
+  .lang-switch a {
+    padding-inline: 0.25rem;
+  }
 }

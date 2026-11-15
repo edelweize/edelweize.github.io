@@ -7,6 +7,15 @@
   <title>Edward Bridger Badar | IT Support &amp; Web Specialist</title>
   <meta name="description" content="Edward Bridger Badar is an IT Support and Web Specialist with 10+ years of experience across IT support, networking, web, and project documentation. Open to remote roles and freelance projects.">
 
+  <!-- Open Graph: the title and description shown when this page is shared on WhatsApp, LinkedIn, and other apps. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Edward Bridger Badar | IT Support &amp; Web Specialist">
+  <meta property="og:description" content="Edward Bridger Badar is an IT Support and Web Specialist with 10+ years of experience across IT support, networking, web, and project documentation. Open to remote roles and freelance projects.">
+
+  <!-- Favicon: the small icon in the browser tab. theme-color tints the browser bar on phones. -->
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0B1220">
+
   <!-- Loads the three fonts from Google Fonts. "preconnect" opens the connection early so fonts arrive faster. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,8 +31,15 @@
     <div class="container header-inner">
       <a href="#top" class="logo">Edward Bridger Badar</a>
 
+      <!-- Language switcher: links to this same page in the other languages. -->
+      <div class="lang-switch" role="group" aria-label="Language">
+        <a href="index.html" lang="en" hreflang="en" class="is-current" aria-current="page">EN</a>
+        <a href="id/index.html" lang="id" hreflang="id">ID</a>
+        <a href="zh/index.html" lang="zh-Hans" hreflang="zh-Hans">中文</a>
+      </div>
+
       <!-- Hamburger button: only visible on small screens. main.js opens and closes the menu. -->
-      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+      <button class="menu-toggle" type="button" aria-label="Open menu" data-label-open="Open menu" data-label-close="Close menu" aria-expanded="false" aria-controls="nav-menu">
         <span></span>
         <span></span>
         <span></span>

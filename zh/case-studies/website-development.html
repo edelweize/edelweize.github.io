@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网站开发与维护 | Edward Bridger Badar</title>
+  <meta name="description" content="案例研究：为一位保密客户搭建并维护企业官网、主机、域名和VPS Web服务器。">
+
+  <!-- Open Graph: the title and description shown when this page is shared on WhatsApp, LinkedIn, and other apps. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="网站开发与维护 | Edward Bridger Badar">
+  <meta property="og:description" content="案例研究：为一位保密客户搭建并维护企业官网、主机、域名和VPS Web服务器。">
+
+  <!-- Favicon: the small icon in the browser tab. theme-color tints the browser bar on phones. -->
+  <link rel="icon" href="../../assets/images/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0B1220">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- "../" means: go up one folder. This page is inside case-studies/, the assets are one level above. -->
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo">Edward Bridger Badar</a>
+
+      <!-- Language switcher: links to this same page in the other languages. -->
+      <div class="lang-switch" role="group" aria-label="Language">
+        <a href="../../case-studies/website-development.html" lang="en" hreflang="en">EN</a>
+        <a href="../../id/case-studies/website-development.html" lang="id" hreflang="id">ID</a>
+        <a href="../../zh/case-studies/website-development.html" lang="zh-Hans" hreflang="zh-Hans" class="is-current" aria-current="page">中文</a>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-label="打开菜单" data-label-open="打开菜单" data-label-close="关闭菜单" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav aria-label="主导航">
+        <ul class="nav-list" id="nav-menu">
+          <li><a href="../index.html#about">关于我</a></li>
+          <li><a href="../index.html#services">服务</a></li>
+          <li><a href="../index.html#skills">技能</a></li>
+          <li><a href="../index.html#experience">工作经历</a></li>
+          <li><a href="../index.html#projects">项目</a></li>
+          <li><a href="../index.html#education">教育背景</a></li>
+          <li><a href="../index.html#contact">联系方式</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="container case-study">
+      <p class="label">网站 · 2022 – 2023</p>
+      <h1>网站开发与维护</h1>
+      <p class="case-intro">为一位保密客户搭建并维护企业官网，包括其背后的主机、域名和服务器。</p>
+
+      <section>
+        <h2>项目概述</h2>
+        <p>作为自由职业网站管理员，我为一位客户负责企业官网落地页。这些页面用WordPress搭建，有时也用纯HTML。我还管理主机和域名，并在VPS上为公司自托管的网站配置Web服务器。因保密原因，不便透露客户名称。</p>
+      </section>
+
+      <section>
+        <h2>问题与挑战</h2>
+        <p>网站必须保持在线并正常运行。常见问题包括脚本停止运行、需要撤销的改动，以及DDoS攻击导致网站下线的风险。</p>
+      </section>
+
+      <section>
+        <h2>我的职责</h2>
+        <ul class="bullet-list">
+          <li>使用WordPress和纯HTML搭建并更新企业官网落地页。</li>
+          <li>排查并修复停止工作的脚本。</li>
+          <li>在需要时从备份恢复网站。</li>
+          <li>管理主机服务、域名和DNS记录。</li>
+          <li>使用Cloudflare部署DDoS防护。</li>
+          <li>在VPS上为自托管网站配置Web服务器。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>技术方案</h2>
+        <p>网站出现问题时，我会先找出导致问题的脚本或改动并直接修复。如果这样做不现实，就从备份恢复网站。网站接入Cloudflare以获得DDoS防护，自托管的网站则运行在我配置的VPS Web服务器上。</p>
+      </section>
+
+      <section>
+        <h2>工具与技术</h2>
+        <ul class="tag-list">
+          <li class="tag">WordPress</li>
+          <li class="tag">HTML5</li>
+          <li class="tag">CSS3</li>
+          <li class="tag">JavaScript</li>
+          <li class="tag">PHP</li>
+          <li class="tag">Cloudflare</li>
+          <li class="tag">VPS</li>
+          <li class="tag">DNS</li>
+          <li class="tag">主机与域名</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>成果与运营效益</h2>
+        <p>客户有一个人对整条链路负责：页面、主机、域名和服务器。出现问题可以修复或从备份回滚，网站也具备了抵御DDoS攻击的防护。</p>
+      </section>
+
+      <section>
+        <h2>经验总结</h2>
+        <p>从备份恢复有时是让网站恢复正常的最快办法，因此保持备份最新与修复原始故障同样重要。</p>
+      </section>
+
+      <nav class="case-nav" aria-label="案例导航">
+        <a href="../index.html#projects">← 全部项目</a>
+        <a href="seo-optimization.html">下一篇：SEO与网站优化 →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="logo">Edward Bridger Badar</p>
+      <p>IT支持与网站专员 — SEO与网络</p>
+      <p><a href="#top">返回顶部 ↑</a></p>
+      <p>&copy; <span id="year">2026</span> Edward Bridger Badar。保留所有权利。</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

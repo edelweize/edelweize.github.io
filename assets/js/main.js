@@ -12,6 +12,11 @@ yearElement.textContent = new Date().getFullYear();
 const menuToggle = document.querySelector(".menu-toggle");
 const navList = document.querySelector(".nav-list");
 
+// The button's labels are written in the HTML (data-label-open, data-label-close),
+// so each language version of the site can use its own words.
+const openLabel = menuToggle.dataset.labelOpen;
+const closeLabel = menuToggle.dataset.labelClose;
+
 // Opens the menu if it is closed, closes it if it is open.
 function toggleMenu() {
   // classList.toggle adds the class if it is missing and removes it if it is there.
@@ -21,9 +26,9 @@ function toggleMenu() {
   // Keep the button's description in sync for screen readers.
   menuToggle.setAttribute("aria-expanded", isOpen);
   if (isOpen) {
-    menuToggle.setAttribute("aria-label", "Close menu");
+    menuToggle.setAttribute("aria-label", closeLabel);
   } else {
-    menuToggle.setAttribute("aria-label", "Open menu");
+    menuToggle.setAttribute("aria-label", openLabel);
   }
 }
 
@@ -31,7 +36,7 @@ function toggleMenu() {
 function closeMenu() {
   navList.classList.remove("is-open");
   menuToggle.setAttribute("aria-expanded", "false");
-  menuToggle.setAttribute("aria-label", "Open menu");
+  menuToggle.setAttribute("aria-label", openLabel);
 }
 
 // Run toggleMenu every time the button is clicked.

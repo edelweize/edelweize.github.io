@@ -206,3 +206,22 @@ section > ul {
     gap: 0;
   }
 }
+
+/* Language links in the toolbar. */
+.lang-switch {
+  display: flex;
+  gap: 0.75rem;
+  margin-right: auto;
+  margin-left: 1rem;
+  font-size: 9.5pt;
+}
+
+.lang-switch a.is-current {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Chinese CV: Inter has no Chinese characters, so add fonts already installed on most devices. */
+html:lang(zh) body {
+  font-family: "Inter", "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+}
