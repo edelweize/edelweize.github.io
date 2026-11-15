@@ -1,0 +1,208 @@
+/* cv.css — styles for cv.html only.
+   The CV is designed as a sheet of paper: white background, dark text.
+   Order: 1. Tokens  2. Base  3. Screen layout  4. Content  5. Print rules */
+
+
+/* 1. TOKENS ---------------------------------------------------------------------- */
+:root {
+  --ink: #0B1220;
+  --ink-muted: #475569;
+  --accent: #0E7490;
+  --line: #CBD5E1;
+}
+
+
+/* 2. BASE ------------------------------------------------------------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #E2E8F0;
+  color: var(--ink);
+  font-family: "Inter", sans-serif;
+  font-size: 10pt;
+  line-height: 1.4;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+
+/* 3. SCREEN LAYOUT ---------------------------------------------------------------
+   On screen the CV looks like a sheet of paper on a grey desk. */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  max-width: 210mm;
+  margin: 1rem auto;
+  padding-inline: 1rem;
+}
+
+.toolbar button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--ink);
+  color: #FFFFFF;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* 210mm is the width of an A4 sheet. */
+.page {
+  max-width: 210mm;
+  margin: 0 auto 2rem;
+  padding: 15mm;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* 4. CONTENT --------------------------------------------------------------------- */
+.cv-header {
+  padding-bottom: 3mm;
+  border-bottom: 2px solid var(--ink);
+}
+
+h1 {
+  font-size: 22pt;
+  line-height: 1.1;
+}
+
+.cv-title {
+  margin-top: 1mm;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.cv-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 4mm;
+  margin-top: 2mm;
+  list-style: none;
+  font-size: 9.5pt;
+  color: var(--ink-muted);
+}
+
+section {
+  margin-top: 4mm;
+}
+
+h2 {
+  margin-bottom: 2mm;
+  padding-bottom: 1mm;
+  border-bottom: 1px solid var(--line);
+  color: var(--accent);
+  font-size: 11pt;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.job {
+  margin-bottom: 2.5mm;
+}
+
+/* Job title on the left, period on the right. */
+.job-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4mm;
+}
+
+h3 {
+  font-size: 10pt;
+}
+
+.job-period {
+  flex-shrink: 0;
+  color: var(--ink-muted);
+  font-size: 9.5pt;
+}
+
+.job-company {
+  color: var(--ink-muted);
+  font-weight: 500;
+}
+
+.job ul,
+section > ul {
+  margin-top: 1mm;
+  padding-left: 5mm;
+}
+
+/* Skills: a two-column list, category on the left and skills on the right. */
+.skills {
+  display: grid;
+  grid-template-columns: 28mm 1fr;
+  gap: 1mm 4mm;
+}
+
+.skills dt {
+  font-weight: 600;
+}
+
+
+/* 5. PRINT RULES -----------------------------------------------------------------
+   These apply only when the page is printed or saved as PDF. */
+
+/* Paper size and margins of the printed page. */
+@page {
+  size: A4;
+  margin: 12mm;
+}
+
+@media print {
+  /* Remove everything that only makes sense on screen. */
+  body {
+    background-color: #FFFFFF;
+  }
+
+  .toolbar {
+    display: none;
+  }
+
+  /* The @page margin already gives the paper its edges. */
+  .page {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+  }
+
+  /* Do not split one job across two pages, and keep headings with their content. */
+  .job {
+    break-inside: avoid;
+  }
+
+  h2 {
+    break-after: avoid;
+  }
+}
+
+/* Small screens: stack the skills list. */
+@media screen and (max-width: 640px) {
+  .page {
+    padding: 6mm;
+  }
+
+  .skills {
+    grid-template-columns: 1fr;
+  }
+
+  .job-head {
+    flex-direction: column;
+    gap: 0;
+  }
+}
