@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Development &amp; Maintenance | Edward Bridger Badar</title>
+  <meta name="description" content="Case study: building and maintaining company profile websites, hosting, domains, and a VPS web server for a confidential client.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- "../" means: go up one folder. This page is inside case-studies/, the assets are one level above. -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo">Edward Bridger Badar</a>
+
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-list" id="nav-menu">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#education">Education</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="container case-study">
+      <p class="label">Web · 2022 – 2023</p>
+      <h1>Website Development &amp; Maintenance</h1>
+      <p class="case-intro">Building and maintaining company profile websites for a confidential client, including the hosting, domains, and server behind them.</p>
+
+      <section>
+        <h2>Project Overview</h2>
+        <p>As a freelance webmaster I looked after company profile landing pages for a client. The pages were built with WordPress, and sometimes with plain HTML. I also managed the hosting and domains, and configured a web server on a VPS for the company's self-hosted websites. The client's name is withheld for confidentiality.</p>
+      </section>
+
+      <section>
+        <h2>Problem or Challenge</h2>
+        <p>The websites needed to stay online and working. Typical problems were scripts that stopped running, changes that had to be undone, and the risk of DDoS attacks taking a site offline.</p>
+      </section>
+
+      <section>
+        <h2>My Role</h2>
+        <ul class="bullet-list">
+          <li>Built and updated company profile landing pages with WordPress and plain HTML.</li>
+          <li>Investigated and fixed scripts that stopped working.</li>
+          <li>Restored websites from backup when needed.</li>
+          <li>Managed hosting services, domains, and DNS records.</li>
+          <li>Set up DDoS protection using Cloudflare.</li>
+          <li>Configured a web server on a VPS for self-hosted websites.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Technical Approach</h2>
+        <p>When a site had a problem, I first looked for the script or change that caused it and fixed it directly. If that was not practical, I restored the site from a backup. Websites were placed behind Cloudflare for DDoS protection, and self-hosted sites ran on a VPS web server that I configured.</p>
+      </section>
+
+      <section>
+        <h2>Tools and Technologies</h2>
+        <ul class="tag-list">
+          <li class="tag">WordPress</li>
+          <li class="tag">HTML5</li>
+          <li class="tag">CSS3</li>
+          <li class="tag">JavaScript</li>
+          <li class="tag">PHP</li>
+          <li class="tag">Cloudflare</li>
+          <li class="tag">VPS</li>
+          <li class="tag">DNS</li>
+          <li class="tag">Hosting &amp; Domains</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Results or Operational Benefits</h2>
+        <p>The client had one person responsible for the whole chain: the pages, the hosting, the domain, and the server. Problems could be fixed or rolled back from backup, and the sites had protection against DDoS attacks.</p>
+      </section>
+
+      <section>
+        <h2>Lessons Learned</h2>
+        <p>Restoring from backup was sometimes the fastest way back to a working site, which is why keeping backups current matters as much as fixing the original fault.</p>
+      </section>
+
+      <nav class="case-nav" aria-label="Case study navigation">
+        <a href="../index.html#projects">← All projects</a>
+        <a href="seo-optimization.html">Next: SEO &amp; Website Optimization →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="logo">Edward Bridger Badar</p>
+      <p>IT Support &amp; Web Specialist — SEO &amp; Networking</p>
+      <p><a href="#top">Back to top ↑</a></p>
+      <p>&copy; <span id="year">2026</span> Edward Bridger Badar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

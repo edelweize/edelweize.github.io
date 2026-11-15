@@ -151,12 +151,14 @@ h3 {
   margin-inline: auto;
 }
 
-section {
+/* "main > section" means: only sections placed directly inside <main>.
+   Sections nested deeper (inside a case study article) are not affected. */
+main > section {
   padding-block: var(--space-xl);
 }
 
 /* Every second section gets the lighter navy, so sections alternate. */
-section:nth-of-type(even) {
+main > section:nth-of-type(even) {
   background-color: var(--color-bg-alt);
 }
 
@@ -470,6 +472,58 @@ html {
 }
 
 
+/* Case study page: one narrow column of text, easier to read than full width. */
+.case-study {
+  max-width: 800px;
+  padding-block: var(--space-xl);
+}
+
+.case-study .case-intro {
+  font-size: 1.125rem;
+  margin-top: var(--space-sm);
+}
+
+.case-study h2 {
+  font-size: 1.5rem;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+/* Bulleted and numbered lists inside text content. */
+.bullet-list,
+.step-list {
+  padding-left: 1.25rem;
+  margin-bottom: var(--space-sm);
+  color: var(--color-text-muted);
+  max-width: 65ch;
+}
+
+.bullet-list {
+  list-style: disc;
+}
+
+.step-list {
+  list-style: decimal;
+}
+
+.bullet-list li,
+.step-list li {
+  margin-bottom: 0.25rem;
+}
+
+/* Links at the bottom of a case study: back to the list, and on to the next one. */
+.case-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+  font-weight: 600;
+}
+
+
 /* 7. RESPONSIVE ------------------------------------------------------------------
    Everything above describes the desktop layout. The media queries below
    change only what needs to be different on smaller screens.
@@ -518,7 +572,11 @@ html {
 
 /* Phone */
 @media (max-width: 640px) {
-  section {
+  main > section {
+    padding-block: var(--space-lg);
+  }
+
+  .case-study {
     padding-block: var(--space-lg);
   }
 

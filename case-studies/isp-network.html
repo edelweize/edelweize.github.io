@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISP Network Deployment &amp; Field Operations | Edward Bridger Badar</title>
+  <meta name="description" content="Case study: activating new fiber internet customers for a local ISP serving approximately 400 subscribers.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- "../" means: go up one folder. This page is inside case-studies/, the assets are one level above. -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo">Edward Bridger Badar</a>
+
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-list" id="nav-menu">
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="../index.html#skills">Skills</a></li>
+          <li><a href="../index.html#experience">Experience</a></li>
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#education">Education</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="container case-study">
+      <p class="label">Networking · 2021 – 2022</p>
+      <h1>ISP Network Deployment &amp; Field Operations</h1>
+      <p class="case-intro">Activating new fiber internet customers for a local internet service provider serving approximately 400 subscribers.</p>
+
+      <section>
+        <h2>Project Overview</h2>
+        <p>At PT Pronet Media I worked as an IT Project Engineer. The company provided fiber internet to approximately 400 subscribers. My work connected the field team installing at the customer's home with the network equipment that brings the connection online.</p>
+      </section>
+
+      <section>
+        <h2>Problem or Challenge</h2>
+        <p>Every new installation depended on accurate information passing from the field to the network side: the distance from the house to the distribution point, the modem's serial number, and the port used. That information had to become a working, correctly limited connection, and field technicians needed a clear way to finish the setup at the customer's home.</p>
+      </section>
+
+      <section>
+        <h2>My Role</h2>
+        <ul class="bullet-list">
+          <li>Received site survey reports from the field team and prepared each new activation.</li>
+          <li>Registered customer modems on the OLT and checked that the optical signal loss was within a safe range.</li>
+          <li>Created PPPoE accounts and speed settings in MikroTik for each customer.</li>
+          <li>Guided field technicians on connecting the modem to the network and setting up the customer's Wi-Fi.</li>
+          <li>Coordinated with vendors on primary and backup uplink configuration, and assisted with the configuration.</li>
+          <li>Reported infrastructure utilization and customer activations to vendors.</li>
+          <li>Managed the warehouse of network equipment.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Technical Approach</h2>
+        <ol class="step-list">
+          <li>The field team surveys the location and reports the distance to the ODP, the modem serial number, and the ODP port in use.</li>
+          <li>The modem's serial number and port are registered on the OLT.</li>
+          <li>The optical signal loss is checked to confirm the line is healthy.</li>
+          <li>A PPPoE account and speed setting are created in MikroTik.</li>
+          <li>The technician enters the PPPoE details on the customer's modem so it connects to the network.</li>
+          <li>The customer's Wi-Fi is configured and the connection is tested.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>Tools and Technologies</h2>
+        <ul class="tag-list">
+          <li class="tag">MikroTik</li>
+          <li class="tag">PPPoE</li>
+          <li class="tag">Nokia OLT</li>
+          <li class="tag">ODP</li>
+          <li class="tag">ONT</li>
+          <li class="tag">Fiber Optic</li>
+          <li class="tag">Wi-Fi Setup</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Results or Operational Benefits</h2>
+        <p>New customers were activated through the same sequence each time, from survey to a tested connection. Each connection was limited to the customer's subscribed speed, and field technicians had the guidance they needed to complete modem and Wi-Fi setup on site.</p>
+      </section>
+
+      <section>
+        <h2>Lessons Learned</h2>
+        <p>A connection only works when both sides are configured correctly: the MikroTik side and the modem side. Accurate information from the field is what makes that possible.</p>
+      </section>
+
+      <nav class="case-nav" aria-label="Case study navigation">
+        <a href="../index.html#projects">← All projects</a>
+        <a href="website-development.html">Next: Website Development →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="logo">Edward Bridger Badar</p>
+      <p>IT Support &amp; Web Specialist — SEO &amp; Networking</p>
+      <p><a href="#top">Back to top ↑</a></p>
+      <p>&copy; <span id="year">2026</span> Edward Bridger Badar. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
