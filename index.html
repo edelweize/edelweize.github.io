@@ -22,8 +22,15 @@
     <div class="container header-inner">
       <a href="#top" class="logo">Edward Bridger Badar</a>
 
+      <!-- Hamburger button: only visible on small screens. main.js opens and closes the menu. -->
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <nav aria-label="Main navigation">
-        <ul class="nav-list">
+        <ul class="nav-list" id="nav-menu">
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#skills">Skills</a></li>

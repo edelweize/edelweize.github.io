@@ -423,6 +423,53 @@ html {
 }
 
 
+/* Hamburger button: hidden on desktop, shown in the responsive section below. */
+.menu-toggle {
+  display: none;
+  padding: var(--space-xs);
+  background: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+/* The three bars of the hamburger icon. */
+.menu-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin-block: 4px;
+  background-color: var(--color-text);
+}
+
+/* Nav link of the section currently on screen. main.js adds the class "active". */
+.nav-list a.active {
+  color: var(--color-accent);
+}
+
+/* Fade-in on scroll. main.js adds "reveal" to each block, then "is-visible"
+   when the block enters the screen. */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* No fade-in for visitors who disabled animations on their device. */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+
 /* 7. RESPONSIVE ------------------------------------------------------------------
    Everything above describes the desktop layout. The media queries below
    change only what needs to be different on smaller screens.
@@ -437,6 +484,35 @@ html {
 
   .hero-photo {
     width: 200px;
+  }
+}
+
+/* Small tablet and phone: the nav links are replaced by the hamburger menu. */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  /* The nav takes a full row below the logo and button. */
+  .site-header nav {
+    flex-basis: 100%;
+  }
+
+  /* Hidden by default. main.js adds the class "is-open" when the button is clicked. */
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-list.is-open {
+    display: flex;
+  }
+
+  .nav-list a {
+    display: block;
+    padding-block: var(--space-xs);
+    font-size: 1rem;
   }
 }
 
@@ -455,16 +531,6 @@ html {
     width: 160px;
     order: -1;
     justify-self: start;
-  }
-
-  /* The wrapped nav is tall on a phone, so the header scrolls away with the page.
-     It becomes sticky again in Stage 5, when the hamburger menu is added. */
-  .site-header {
-    position: static;
-  }
-
-  .nav-list {
-    gap: var(--space-xs) var(--space-sm);
   }
 
   .section-subtitle {
