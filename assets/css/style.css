@@ -1,5 +1,5 @@
 /* ==========================================================================
-   style.css — the appearance of the website
+   style.css: the appearance of the website
    Order: 1. Design tokens  2. Reset  3. Base  4. Typography  5. Sections
           6. Components
    ========================================================================== */
@@ -378,6 +378,53 @@ a.logo {
   inset: 0;
 }
 
+/* Row list: used for Services and Education. The same content as cards, but laid
+   out as plain rows with a line between them: name on the left, detail on the right.
+   Short reference facts read faster as a list than as a wall of boxes. */
+.row-list {
+  display: block;
+  max-width: 900px;
+}
+
+.row-list .card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: var(--space-lg);
+  padding: var(--space-md) 0;
+  background: none;
+  border: 0;
+  border-top: 1px solid var(--color-border);
+  border-radius: 0;
+}
+
+.row-list .card:last-child {
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* The description always sits in the right column. */
+.row-list .card > p:last-child {
+  grid-column: 2;
+}
+
+/* Education rows start with a small label that spans both lines on the left. */
+.row-list .card > .label {
+  grid-row: span 2;
+}
+
+/* Case study grid: the main proof of work, so these cards are larger than any other. */
+.case-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.case-grid .card {
+  padding: var(--space-lg) var(--space-md);
+}
+
+.case-grid h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
 /* Sub-heading inside a section, e.g. "Case Studies". */
 .section-subtitle {
   font-size: 1.5rem;
@@ -565,7 +612,15 @@ html:lang(zh) {
   transform: none;
 }
 
-/* No fade-in and no hover movement for visitors who disabled animations on their device. */
+/* On paper nothing scrolls, so every section must be visible when the page is printed. */
+@media print {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* No fade-in and no hover or press movement for visitors who disabled animations on their device. */
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
@@ -719,6 +774,23 @@ html:lang(zh) {
 
   .section-subtitle {
     margin-block: var(--space-md) var(--space-sm);
+  }
+
+  /* Rows stack into one column on phones. */
+  .row-list .card {
+    grid-template-columns: 1fr;
+  }
+
+  .row-list .card > p:last-child {
+    grid-column: 1;
+  }
+
+  .case-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .case-grid .card {
+    padding: var(--space-md);
   }
 
   /* EXERCISE 6: make the two hero buttons full width on phones. Write the rule below this line. */

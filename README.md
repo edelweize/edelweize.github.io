@@ -13,7 +13,8 @@ Live site: https://edelweize.github.io/
 - `cv.html`: printable CV, the source of the PDF
 - `assets/css/style.css`: styles for the website
 - `assets/css/cv.css`: styles for the CV page, including print rules
-- `assets/js/main.js`: interactions: mobile menu, active nav link, fade-in, footer year
+- `assets/js/main.js`: mobile menu, active nav link, fade-in on scroll, and footer year
+- `DESIGN.md`: the reasons behind the design. Read it before changing how the site looks
 - `assets/images/`: profile photo and favicon
 - `assets/documents/Edward_Bridger_Badar_CV.pdf`: the CV file behind the "Download CV" button
 

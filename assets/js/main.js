@@ -1,4 +1,4 @@
-// main.js — the behavior of the website.
+// main.js: the behavior of the website.
 // Order: 1. Footer year  2. Mobile menu  3. Active nav link  4. Fade-in on scroll
 
 
@@ -81,7 +81,8 @@ sections.forEach(function (section) {
 
 
 // 4. FADE-IN ON SCROLL ---------------------------------------------------------
-// Every section's content block fades in the first time it enters the screen.
+// Every section's content block fades in the first time it enters the screen,
+// so the eye is led to the section that has just arrived.
 // The hero is skipped so the top of the page is visible immediately.
 const revealBlocks = document.querySelectorAll("main section:not(#hero) .container");
 
@@ -96,6 +97,8 @@ const revealObserver = new IntersectionObserver(function (entries) {
   });
 }, { rootMargin: "0px 0px -10% 0px" });
 
+// The class "reveal" is added here, not in the HTML. If this script does not
+// run, the blocks are never hidden, so the content stays readable.
 revealBlocks.forEach(function (block) {
   block.classList.add("reveal");
   revealObserver.observe(block);
