@@ -1,3 +1,6 @@
 # Tool folders that are not part of the website
 .omc/
 .claude/
+
+# Design audit reports, not part of the website
+anti-slop/

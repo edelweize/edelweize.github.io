@@ -42,12 +42,27 @@ a {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  flex-wrap: wrap;
   max-width: 210mm;
   margin: 1rem auto;
   padding-inline: 1rem;
 }
 
+/* Toolbar links sit on the grey desk, so they use a darker teal than the
+   links on the white page, to keep enough contrast. 44px is the touch area. */
+.toolbar a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: #155E75;
+}
+
+.toolbar a:hover {
+  text-decoration: underline;
+}
+
 .toolbar button {
+  min-height: 44px;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 6px;
@@ -56,6 +71,14 @@ a {
   font: inherit;
   font-weight: 600;
   cursor: pointer;
+}
+
+.toolbar button:hover {
+  background-color: #155E75;
+}
+
+.toolbar button:active {
+  transform: translateY(2px);
 }
 
 /* 210mm is the width of an A4 sheet. */
@@ -214,6 +237,11 @@ section > ul {
   margin-right: auto;
   margin-left: 1rem;
   font-size: 9.5pt;
+}
+
+.lang-switch a {
+  justify-content: center;
+  min-width: 44px;
 }
 
 .lang-switch a.is-current {

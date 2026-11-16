@@ -1,4 +1,4 @@
-# Edward Bridger Badar — Portfolio
+# Edward Bridger Badar: Portfolio
 
 Personal portfolio website for Edward Bridger Badar, IT Support & Web Specialist.
 
@@ -8,22 +8,22 @@ Live site: https://edelweize.github.io/
 
 ## Structure
 
-- `index.html` — main page
-- `case-studies/` — one page per case study (five pages)
-- `cv.html` — printable CV, the source of the PDF
-- `assets/css/style.css` — styles for the website
-- `assets/css/cv.css` — styles for the CV page, including print rules
-- `assets/js/main.js` — interactions: mobile menu, active nav link, fade-in, footer year
-- `assets/images/` — profile photo and favicon
-- `assets/documents/Edward_Bridger_Badar_CV.pdf` — the CV file behind the "Download CV" button
+- `index.html`: main page
+- `case-studies/`: one page per case study (five pages)
+- `cv.html`: printable CV, the source of the PDF
+- `assets/css/style.css`: styles for the website
+- `assets/css/cv.css`: styles for the CV page, including print rules
+- `assets/js/main.js`: interactions: mobile menu, active nav link, fade-in, footer year
+- `assets/images/`: profile photo and favicon
+- `assets/documents/Edward_Bridger_Badar_CV.pdf`: the CV file behind the "Download CV" button
 
 ## Languages
 
 The site exists in three languages. Each language is a full copy of the pages:
 
-- English — the files in the project root (`index.html`, `cv.html`, `case-studies/`)
-- Indonesian — the same files inside `id/`
-- Simplified Chinese — the same files inside `zh/`
+- English: the files in the project root (`index.html`, `cv.html`, `case-studies/`)
+- Indonesian: the same files inside `id/`
+- Simplified Chinese: the same files inside `zh/`
 
 All three share the same `assets/` folder. Each has its own CV PDF:
 `Edward_Bridger_Badar_CV.pdf`, `..._CV_ID.pdf`, and `..._CV_ZH.pdf`.

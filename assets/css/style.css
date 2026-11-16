@@ -80,6 +80,12 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Pressed state: a thicker underline, so the press is visible without relying on color. */
+a:active {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
 /* Visible outline for people who navigate with the keyboard (Tab key). */
 :focus-visible {
   outline: 2px solid var(--color-accent);
@@ -97,7 +103,8 @@ a:hover {
 /* 4. TYPOGRAPHY ------------------------------------------------------------------ */
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-family: var(--font-heading);
   line-height: 1.2;
 }
@@ -130,7 +137,10 @@ p {
 }
 
 
-h3 {
+/* h4 is used for card titles that sit under an h3 sub-heading. It looks the same as h3,
+   but keeps the heading levels in order for screen readers. */
+h3,
+h4 {
   font-size: 1.25rem;
   font-weight: 500;
   margin-bottom: var(--space-xs);
@@ -195,20 +205,33 @@ html {
   color: var(--color-text);
 }
 
+/* The logo in the header is a link, so it gets a 44px touch area too. */
+a.logo {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
 .nav-list {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-md);
 }
 
+/* min-height: 44px gives every link a touch area large enough for a finger. */
 .nav-list a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   color: var(--color-text-muted);
   font-size: 0.9375rem;
 }
 
+/* Hover changes the color and adds an underline, so it does not rely on color alone. */
 .nav-list a:hover {
   color: var(--color-accent);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 0.375rem;
 }
 
 /* Hero: Grid with two columns, text on the left and photo on the right. */
@@ -260,6 +283,12 @@ html {
   margin-bottom: var(--space-xs);
 }
 
+.site-footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
 
 /* 6. COMPONENTS ------------------------------------------------------------------ */
 
@@ -275,6 +304,12 @@ html {
 
 .btn:hover {
   text-decoration: none;
+}
+
+/* Pressed state: the button moves down slightly. */
+.btn:active {
+  text-decoration: none;
+  transform: translateY(2px);
 }
 
 /* Primary button: filled cyan. */
@@ -313,10 +348,13 @@ html {
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   padding: var(--space-md);
+  position: relative;
   transition: border-color 0.2s, transform 0.2s;
 }
 
-.card:hover {
+/* Only cards that contain a link react to the pointer. A card that cannot be
+   clicked stays still, so it does not promise an action it does not have. */
+.card:has(.card-link):hover {
   border-color: var(--color-accent);
   transform: translateY(-4px);
 }
@@ -326,8 +364,18 @@ html {
 }
 
 .card-link {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
   font-weight: 600;
+}
+
+/* Stretched link: an invisible layer over the whole card, so clicking
+   anywhere on the card follows its link. */
+.card-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 }
 
 /* Sub-heading inside a section, e.g. "Case Studies". */
@@ -438,8 +486,13 @@ html {
   font-size: 0.8125rem;
 }
 
+/* Each language link is at least 44px by 44px, large enough for a finger. */
 .lang-switch a {
-  padding: 0.125rem 0.375rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
   border: 1px solid var(--color-border);
   border-radius: 4px;
   color: var(--color-text-muted);
@@ -447,7 +500,8 @@ html {
 
 .lang-switch a:hover {
   color: var(--color-accent);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
 }
 
 /* The language of the page being viewed. */
@@ -467,11 +521,21 @@ html:lang(zh) {
 /* Hamburger button: hidden on desktop, shown in the responsive section below. */
 .menu-toggle {
   display: none;
-  padding: var(--space-xs);
+  /* 11px of padding around the 22px icon makes a 44px touch area. */
+  padding: 0.6875rem;
   background: none;
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   cursor: pointer;
+}
+
+.menu-toggle:hover {
+  border-color: var(--color-accent);
+  background-color: rgba(34, 211, 238, 0.12);
+}
+
+.menu-toggle:active {
+  transform: translateY(2px);
 }
 
 /* The three bars of the hamburger icon. */
@@ -501,12 +565,23 @@ html:lang(zh) {
   transform: none;
 }
 
-/* No fade-in for visitors who disabled animations on their device. */
+/* No fade-in and no hover movement for visitors who disabled animations on their device. */
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .card,
+  .btn {
+    transition: none;
+  }
+
+  .card:has(.card-link):hover,
+  .btn:active,
+  .menu-toggle:active {
+    transform: none;
   }
 }
 
@@ -562,6 +637,12 @@ html:lang(zh) {
   font-weight: 600;
 }
 
+.case-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
 
 /* 7. RESPONSIVE ------------------------------------------------------------------
    Everything above describes the desktop layout. The media queries below
@@ -610,8 +691,7 @@ html:lang(zh) {
   }
 
   .nav-list a {
-    display: block;
-    padding-block: var(--space-xs);
+    display: flex;
     font-size: 1rem;
   }
 }
@@ -667,7 +747,9 @@ html:lang(zh) {
     gap: 0.25rem;
   }
 
-  .lang-switch a {
-    padding-inline: 0.25rem;
+  /* Three 44px language links do not fit next to the logo on a small phone.
+     The link for the language already on screen is hidden, the other two stay. */
+  .lang-switch a.is-current {
+    display: none;
   }
 }
